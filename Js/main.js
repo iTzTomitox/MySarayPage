@@ -21,16 +21,15 @@ window.addEventListener("load", () => {
       // Forzar un reflow para que el navegador aplique la transición
       void contenido.offsetWidth;
       contenido.style.opacity = "1";
-    }, 800); // tiempo del fade del loader
-  }, 2000); // tiempo que permanece el loader
+    }, 600); // tiempo del fade del loader
+  }, 1000); // tiempo que permanece el loader IMPORTANTE 
 });
 
 
-// --- DARK MODE TOGGLE ---
 document.addEventListener("DOMContentLoaded", () => {
   const checkbox = document.querySelector(".toggle-switch .checkbox");
 
-  // Recuperar preferencia previa
+  // Recuperar preferencia previa A tener en cuenta
   if (localStorage.getItem("dark-mode") === "true") {
     document.body.classList.add("dark-mode");
     checkbox.checked = false; // Apagado = oscuro
@@ -41,11 +40,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   checkbox.addEventListener("change", () => {
     if (checkbox.checked) {
-      // ✅ Encendido → modo claro
+      // Encendido → modo claro
       document.body.classList.remove("dark-mode");
       localStorage.setItem("dark-mode", "false");
     } else {
-      // 🌙 Apagado → modo oscuro
+      //  Apagado → modo oscuro
       document.body.classList.add("dark-mode");
       localStorage.setItem("dark-mode", "true");
     }
