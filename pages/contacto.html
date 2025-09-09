@@ -88,19 +88,30 @@
             </nav>
         </header>
 
-        <section>
-            <h2>Contacto</h2>
-            <form action="">
-                <label for="username:"></label>
-                <input type="text" id="username" name="username">
+        <section class="form-libro">
+            <div class="book">
+                <div class="book-left">
+                    <h2>Contacto</h2>
+                    <p>Completa tus datos para ponerte en contacto con <strong>My Saray</strong>.</p>
+                </div>
+                <div class="book-right">
+                    <form>
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" required>
 
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email" required>
 
-                <label for="mensaje">Mensaje:</label>
-                <input type="text" name="mensaje" id="mensaje">
-            </form>
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
         </section>
+
+
 
         <footer>
             <div class="footer-1">
@@ -141,13 +152,15 @@
                     </div>
                 </div>
 
-                <div>
+                <div class="section-footer">
+
                     <li><a href="../index.html">Inicio</a></li>
                     <li><a href="../pages/sobrelaautora.html">Sobre la Autora</a></li>
                     <li><a href="../pages/obras.html">Obras</a></li>
                     <li><a href="../pages/blog.html">Blog</a></li>
                     <li><a href="../pages/eventos.html">Eventos</a></li>
                     <li><a href="../pages/contacto.html">Contacto</a></li>
+
                 </div>
             </div>
 
