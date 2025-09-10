@@ -685,3 +685,31 @@ body.dark-mode .book-right button {
   margin: 0px 208px;
   flex-direction: column;
 }
+
+.historia2 {
+  display: flex;
+  margin: 0px 208px;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.libro {
+  display: flex;
+  margin: 0px 208px;
+  flex-direction: column;
+}
+
+.titulo-del-libro {
+  margin: 24px 0px;
+}
+
+.imagen-libro-text {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: center;
+}
+
+.imagen-libro-text img {
+  width: 500px;
+}
