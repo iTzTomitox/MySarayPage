@@ -91,10 +91,10 @@ body nav .toggle-switch .switch-label .checkbox {
   position: absolute;
   display: none;
 }
-body nav .toggle-switch .switch-label:checked ~ .slider {
+body nav .toggle-switch .switch-label :checked ~ .slider {
   background-color: var(--light);
 }
-body nav .toggle-switch .switch-label:checked ~ .slider::before {
+body nav .toggle-switch .switch-label :checked ~ .slider::before {
   -webkit-transform: translateX(50px);
   -ms-transform: translateX(50px);
   transform: translateX(50px);
@@ -218,8 +218,8 @@ body.dark-mode .loader span {
   text-align: center;
   color: white;
 }
-body.dark-mode .section-footer li::before {
-  background-color: #ffffff;
+body.dark-mode footer .footer-1 .section-footer li::before {
+  background-color: white;
 }
 body.dark-mode .form-libro .book {
   background: #1e1e1e;
@@ -287,7 +287,7 @@ body footer .footer-1 .section-footer li::before {
   height: 2px;
   width: 0;
   border-radius: 2px;
-  color: white;
+  background-color: #000;
   transition: width 0.3s ease;
 }
 body footer .footer-1 .section-footer li:hover::before {
