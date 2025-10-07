@@ -30,7 +30,7 @@ body {
     }
 
     .img-profile {
-        width: 100%;
+        width: 800px;
     }
 
     .libro {
@@ -52,6 +52,10 @@ body {
                 width: 500px;
             }
         }
+    }
+
+    .second-image{
+        width: 540px;
     }
 
     .historia2 {
@@ -218,6 +222,14 @@ body {
 
         nav {
             background-color: #141414;
+
+            .nav-links {
+                li {
+                    &::before {
+                        background-color: white;
+                    }
+                }
+            }
         }
 
         a {

@@ -25,7 +25,7 @@ body .text-intermed {
   margin: 0px 208px;
 }
 body .img-profile {
-  width: 100%;
+  width: 800px;
 }
 body .libro {
   display: flex;
@@ -43,6 +43,9 @@ body .libro .imagen-libro-text {
 }
 body .libro .imagen-libro-text img {
   width: 500px;
+}
+body .second-image {
+  width: 540px;
 }
 body .historia2 {
   display: flex;
@@ -186,6 +189,9 @@ body.dark-mode {
 }
 body.dark-mode nav {
   background-color: #141414;
+}
+body.dark-mode nav .nav-links li::before {
+  background-color: white;
 }
 body.dark-mode a {
   color: #f5f5f5;
