@@ -19,7 +19,7 @@ body li {
 }
 body a {
   text-decoration: none;
-  color: #000000;
+  color: #000;
 }
 body .text-intermed {
   margin: 0px 208px;
@@ -70,38 +70,34 @@ body nav {
   justify-content: space-between;
   align-items: center;
   padding: 32px 208px;
-  background-color: white;
+  background-color: #fff;
 }
 body nav .toggle-switch {
   position: relative;
   width: 90px;
   height: 40px;
-  --light: #d8dbe0;
-  --dark: #28292c;
-  --link: rgb(27, 129, 112);
-  --link-hover: rgb(24, 94, 82);
 }
 body nav .toggle-switch .switch-label {
   position: absolute;
   width: 100%;
   height: 40px;
-  background-color: var(--dark);
+  background-color: #28292c;
   border-radius: 25px;
   cursor: pointer;
-  border: 3px solid var(--dark);
+  border: 3px solid #28292c;
 }
 body nav .toggle-switch .switch-label .checkbox {
   position: absolute;
   display: none;
 }
 body nav .toggle-switch .switch-label :checked ~ .slider {
-  background-color: var(--light);
+  background-color: #d8dbe0;
 }
 body nav .toggle-switch .switch-label :checked ~ .slider::before {
   -webkit-transform: translateX(50px);
   -ms-transform: translateX(50px);
   transform: translateX(50px);
-  background-color: var(--dark);
+  background-color: #28292c;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -121,9 +117,9 @@ body nav .toggle-switch .switch-label .slider::before {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  -webkit-box-shadow: inset 12px -4px 0px 0px var(--light);
-  box-shadow: inset 12px -4px 0px 0px var(--light);
-  background-color: var(--dark);
+  -webkit-box-shadow: inset 12px -4px 0px 0px #d8dbe0;
+  box-shadow: inset 12px -4px 0px 0px #d8dbe0;
+  background-color: #28292c;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -137,7 +133,7 @@ body nav .nav-links {
   margin: 0px;
   padding: 0;
   font-family: "Montserrat";
-  color: #000000;
+  color: #000;
   line-height: 2;
   position: relative;
 }
@@ -169,8 +165,8 @@ body .inicio-presentacion {
 body .inicio-presentacion button {
   align-items: center;
   padding: 24px 48px;
-  color: white;
-  background-color: black;
+  color: #fff;
+  background-color: #000;
   margin-top: 16px;
   font-family: "Montserrat";
   font-size: 16px;
@@ -178,8 +174,8 @@ body .inicio-presentacion button {
   border: none;
 }
 body .inicio-presentacion button:hover {
-  color: black;
-  background-color: white;
+  color: #000;
+  background-color: #fff;
   transition: 300ms;
 }
 body.dark-mode {
@@ -191,7 +187,7 @@ body.dark-mode nav {
   background-color: #141414;
 }
 body.dark-mode nav .nav-links li::before {
-  background-color: white;
+  background-color: #fff;
 }
 body.dark-mode a {
   color: #f5f5f5;
@@ -200,7 +196,7 @@ body.dark-mode footer {
   background-color: #121212;
 }
 body.dark-mode hr {
-  background-color: #f5f5f5;
+  background-color: #fff;
 }
 body.dark-mode .logo img {
   filter: invert(1) brightness(2);
@@ -210,7 +206,7 @@ body.dark-mode .footer-logo {
   filter: invert(1) brightness(2);
 }
 body.dark-mode .nav-links li ::before {
-  background-color: #ffffff;
+  background-color: #fff;
 }
 body.dark-mode .loader {
   background: #121212;
@@ -222,10 +218,10 @@ body.dark-mode .loader span {
   top: 100%;
   margin-top: 20px;
   text-align: center;
-  color: white;
+  color: #fff;
 }
 body.dark-mode footer .footer-1 .section-footer li::before {
-  background-color: white;
+  background-color: #fff;
 }
 body.dark-mode .form-libro .book {
   background: #1e1e1e;
@@ -261,7 +257,7 @@ body footer {
 body footer hr {
   border: none;
   height: 2px;
-  background-color: black;
+  background-color: #000;
   margin: 0px 0px 24px 0px;
 }
 body footer .footer-baja {
@@ -338,7 +334,7 @@ body footer .footer-1 .footer-2 .card .socialContainer .socialSvg {
   width: 17px;
 }
 body footer .footer-1 .footer-2 .card .socialContainer .socialSvg path {
-  fill: rgb(255, 255, 255);
+  fill: #fff;
 }
 body footer .footer-1 .footer-2 .card .socialContainer:hover .socialSvg {
   animation: slide-in-top 0.3s both;
@@ -364,12 +360,6 @@ body footer .footer-1 .footer-2 .card .socialContainer:active {
   transition-duration: 0.3s;
 }
 body .loader {
-  --background: linear-gradient(135deg, #f823e6, #ff59f7);
-  --shadow: rgba(39, 94, 254, 0.28);
-  --text: #000000;
-  --page: rgba(255, 255, 255, 0.36);
-  --page-fold: rgba(255, 255, 255, 0.52);
-  --duration: 3s;
   width: 200px;
   height: 180px;
   position: fixed;
@@ -377,7 +367,7 @@ body .loader {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 9999;
-  background: white;
+  background: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -390,8 +380,8 @@ body .loader div {
   position: relative;
   z-index: 1;
   perspective: 600px;
-  box-shadow: 0 4px 6px var(--shadow);
-  background-image: var(--background);
+  box-shadow: 0 4px 6px rgba(39, 94, 254, 0.28);
+  background-image: linear-gradient(135deg, #f823e6, #ff59f7);
 }
 body .loader div ul {
   margin: 0;
@@ -402,34 +392,33 @@ body .loader div ul {
 body .loader div ul li {
   --r: 180deg;
   --o: 0;
-  --c: var(--page);
   position: absolute;
   top: 10px;
   left: 10px;
   transform-origin: 100% 50%;
-  color: var(--c);
-  opacity: var(--o);
+  color: rgba(255, 255, 255, 0.36);
+  opacity: rgba(255, 255, 255, 0.36);
   transform: rotateY(var(--r));
-  -webkit-animation: var(--duration) ease infinite;
-  animation: var(--duration) ease infinite;
+  -webkit-animation: 3s ease infinite;
+  animation: 3s ease infinite;
 }
 body .loader div ul li:nth-child(2) {
-  -c: var(--page-fold);
+  -c: rgba(255, 255, 255, 0.52);
   -webkit-animation-name: page-2;
   animation-name: page-2;
 }
 body .loader div ul li:nth-child(3) {
-  --c: var(--page-fold);
+  --c: $loader-page-fold;
   -webkit-animation-name: page-3;
   animation-name: page-3;
 }
 body .loader div ul li:nth-child(4) {
-  --c: var(--page-fold);
+  --c: $loader-page-fold;
   -webkit-animation-name: page-4;
   animation-name: page-4;
 }
 body .loader div ul li:nth-child(5) {
-  --c: var(--page-fold);
+  --c: $loader-page-fold;
   -webkit-animation-name: page-5;
   animation-name: page-5;
 }
@@ -452,7 +441,7 @@ body .loader span {
   top: 100%;
   margin-top: 20px;
   text-align: center;
-  color: var(--text);
+  color: #000000;
 }
 @keyframes page-2 {
   0% {
@@ -580,8 +569,8 @@ body .form-libro .book .book-right textarea {
 }
 body .form-libro .book .book-right button {
   padding: 12px;
-  background: black;
-  color: white;
+  background: #000;
+  color: #fff;
   border: none;
   border-radius: 6px;
   font-size: 16px;
