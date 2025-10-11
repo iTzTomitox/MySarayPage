@@ -1,0 +1,77 @@
+    .form-libro {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 60px 20px;
+
+        .book {
+            display: flex;
+            width: 800px;
+            min-height: 400px;
+            background: $color-white;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            overflow: hidden;
+
+            .book-left {
+                flex: 1;
+                background: #f3f3f3;
+                padding: 40px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                border-right: 2px solid #ddd;
+
+                h2 {
+                    font-size: 28px;
+                    margin-bottom: 15px;
+                }
+
+                p {
+                    font-size: 16px;
+                    line-height: 1.5;
+                }
+            }
+
+            .book-right {
+                flex: 1;
+                padding: 40px;
+                background: #fafafa;
+
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                }
+
+                label {
+                    font-weight: bold;
+                    font-size: 14px;
+                }
+
+                input,
+                textarea {
+                    width: 100%;
+                    padding: 10px;
+                    border: 1px solid #aaa;
+                    border-radius: 5px;
+                    font-size: 14px;
+                }
+
+                button {
+                    padding: 12px;
+                    background: $color-black;
+                    color: $color-white;
+                    border: none;
+                    border-radius: 6px;
+                    font-size: 16px;
+                    cursor: pointer;
+                    transition: 0.3s;
+
+                    &:hover {
+                        background: #444;
+                    }
+                }
+            }
+        }
+    }
