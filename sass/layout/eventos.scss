@@ -1,0 +1,9 @@
+.evento-grid {
+        grid-column: 2 / 12;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: center;
+}
