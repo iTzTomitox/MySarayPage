@@ -53,11 +53,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const toggleButton = document.getElementById("menu-toggle");
-  const navLinks = document.getElementById("nav-links"); // 🔹 nombre correcto
+  const navLinks = document.getElementById("nav-links");
 
   if (toggleButton && navLinks) {
     toggleButton.addEventListener("click", () => {
       navLinks.classList.toggle("active");
+      toggleButton.classList.toggle("active"); // activa animación
+    });
+
+    // Cerrar menú al hacer clic en un enlace
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+        toggleButton.classList.remove("active");
+      });
     });
   }
 });
