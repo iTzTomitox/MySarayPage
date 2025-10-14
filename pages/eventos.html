@@ -66,39 +66,46 @@
 
     <div id="content">
         <header>
-            <nav>
-                <div class="logo">
-                    <a href="../index.html"><img src="../assents/logonegro.png" alt="Logo My Saray"></a>
+            <nav class="navbar">
+                <div class="logo navbar__logo">
+                    <a href="./index.html"><img src="../assents/logonegro.png" alt="Logo My Saray"></a>
                 </div>
-                <ul class="nav-links">
 
+
+                <button class="navbar__toggle" id="menu-toggle" aria-label="Menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+
+                <ul class="nav-links" id="nav-links">
                     <div class="toggle-switch">
                         <label class="switch-label">
                             <input type="checkbox" class="checkbox">
                             <span class="slider"></span>
                         </label>
                     </div>
-
                     <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="./sobrelaautora.html">Sobre la Autora</a></li>
-                    <li><a href="./obras.html">Obras</a></li>
-                    <li><a href="./blog.html">Blog</a></li>
-                    <li><a href="./eventos.html">Eventos</a></li>
-                    <li><a href="./contacto.html">Contacto</a></li>
+                    <li><a href="../pages/sobrelaautora.html">Sobre la Autora</a></li>
+                    <li><a href="../pages/obras.html">Obras</a></li>
+                    <li><a href="../pages/blog.html">Blog</a></li>
+                    <li><a href="../pages/eventos.html">Eventos</a></li>
+                    <li><a href="../pages/contacto.html">Contacto</a></li>
                 </ul>
             </nav>
         </header>
 
         <div class="grid-container">
             <section class="evento-grid">
-                <div>
+                <div class="texto-proyecto">
                     <h2>Feria del libro</h2>
                     <p>Tuve el honor de presentar mi libro, ‘Pinta conmigo, My Saray’, en la Feria del Libro 2024 en
                         Argentina. Fue una experiencia única y muy especial, ya que era la primera vez que participaba
                         en un evento de esta magnitud. Disfruté enormemente la oportunidad de compartir mi obra con los
                         lectores y de firmar ejemplares personalmente.</p>
                 </div>
-                <div>
+                <div class="imagen-proyecto">
                     <img class="img-profile" src="../assents/pic-feriadellibro.jpeg" alt="">
                 </div>
             </section>

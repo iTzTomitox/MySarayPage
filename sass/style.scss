@@ -93,13 +93,16 @@ body {
         }
     }
 
-    .second-image {
-        width: 540px;
+    .imagen-proyecto {
+        width: 700px;
+
+        img {
+            width: 100%;
+        }
     }
 
     .blog-post {
         display: flex;
-        margin: 0px 208px;
         flex-direction: column;
     }
 
@@ -503,88 +506,12 @@ body {
   transition: color 0.3s ease;
 }
 
-/* Modo oscuro */
+
 body.dark-mode .navbar__toggle {
   color: #fff;
 }
 
-/* === NAVBAR ANIMADA Y FUNCIONAL === */
 
-@media (max-width: 768px) {
-  .navbar {
-    position: relative;
-  }
 
-  .navbar__toggle {
-    display: block !important;
-    background: none;
-    border: none;
-    color: #000;
-    font-size: 2rem;
-    cursor: pointer;
-    z-index: 50;
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: transform 0.3s ease, color 0.3s ease;
-  }
 
-  body.dark-mode .navbar__toggle {
-    color: #fff;
-  }
-
-  .nav-links {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    flex-direction: column;
-    align-items: center;
-    background-color: #fff;
-    text-align: center;
-    overflow: hidden;
-
-    max-height: 0;
-    opacity: 0;
-    transition: max-height 0.4s ease, opacity 0.4s ease;
-  }
-
-  .nav-links.active {
-    max-height: 500px; /* suficiente para mostrar todos los links */
-    opacity: 1;
-  }
-
-  body.dark-mode .nav-links {
-    background-color: #121212;
-  }
-
-  .nav-links li {
-    margin: 10px 0;
-  }
-
-  /* --- Animación del ícono hamburguesa --- */
-  .navbar__toggle span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: currentColor;
-    margin: 5px auto;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-  }
-
-  /* Estado animado (X) */
-  .navbar__toggle.active span:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-
-  .navbar__toggle.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .navbar__toggle.active span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-}
 

@@ -1,4 +1,14 @@
 @charset "UTF-8";
+.blog-post {
+  grid-column: 2/12;
+  grid-column-start: 2;
+  grid-row-start: 2;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  align-items: center;
+}
+
 .form-libro {
   display: flex;
   justify-content: center;
@@ -334,6 +344,60 @@
   body div .grid-container p {
     font-size: 16px;
   }
+  body div .grid-container .historia1 {
+    grid-template-columns: 1fr 1fr;
+    grid-column: 2/12;
+    justify-items: center;
+  }
+  body div .grid-container .historia1 .imagen-proyecto {
+    width: 200px;
+  }
+  body div .grid-container .historia1 .imagen-proyecto img {
+    width: 100%;
+  }
+  body div .grid-container .valoraciones {
+    grid-template-columns: 1fr;
+    grid-column: 2/12;
+    justify-items: center;
+  }
+  body div .grid-container .historia2 {
+    grid-template-columns: 1fr 1fr;
+    grid-column: 2/12;
+    justify-items: center;
+  }
+  body div .grid-container .historia2 .imagen-proyecto {
+    width: 200px;
+  }
+  body div .grid-container .historia2 .imagen-proyecto img {
+    width: 100%;
+  }
+  body div .grid-container .historia3 {
+    grid-template-columns: 1fr 1fr;
+    grid-column: 2/12;
+    justify-items: center;
+  }
+  body div .grid-container .historia3 .imagen-proyecto {
+    width: 200px;
+  }
+  body div .grid-container .historia3 .imagen-proyecto img {
+    width: 100%;
+  }
+  body div .grid-container .evento-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-column: 2/12;
+    justify-items: center;
+  }
+  body div .grid-container .evento-grid .imagen-proyecto {
+    width: 400px;
+  }
+  body div .grid-container .evento-grid .imagen-proyecto img {
+    width: 100%;
+  }
+  body div .grid-container .blog-post {
+    grid-template-columns: 1fr;
+    grid-column: 2/12;
+    justify-items: center;
+  }
   body div .grid-container .inicio-presentacion {
     grid-template-columns: 1fr 1fr;
     grid-column: 2/12;
@@ -454,6 +518,50 @@ body.dark-mode .nav-links a {
   body .grid-container p {
     font-size: 24px;
   }
+  body .grid-container .valoraciones {
+    grid-column: 2/12;
+    grid-template-columns: 1fr;
+  }
+  body .grid-container .historia1 {
+    grid-column: 2/12;
+    grid-template-columns: 1fr;
+  }
+  body .grid-container .historia1 .imagen-proyecto {
+    width: 500px;
+  }
+  body .grid-container .historia1 .imagen-proyecto img {
+    width: 100%;
+  }
+  body .grid-container .historia2 {
+    grid-column: 2/12;
+    grid-template-columns: 1fr;
+  }
+  body .grid-container .historia2 .imagen-proyecto {
+    width: 500px;
+  }
+  body .grid-container .historia2 .imagen-proyecto img {
+    width: 100%;
+  }
+  body .grid-container .historia3 {
+    grid-column: 2/12;
+    grid-template-columns: 1fr;
+  }
+  body .grid-container .historia3 .imagen-proyecto {
+    width: 500px;
+  }
+  body .grid-container .historia3 .imagen-proyecto img {
+    width: 100%;
+  }
+  body .grid-container .evento-grid {
+    grid-column: 2/12;
+    grid-template-columns: 1fr;
+  }
+  body .grid-container .evento-grid .imagen-proyecto {
+    width: 500px;
+  }
+  body .grid-container .evento-grid .imagen-proyecto img {
+    width: 100%;
+  }
   body .grid-container .inicio-presentacion {
     grid-column: 2/12;
     grid-template-columns: 1fr;
@@ -548,12 +656,14 @@ body .libro .imagen-libro-text {
 body .libro .imagen-libro-text img {
   width: 500px;
 }
-body .second-image {
-  width: 540px;
+body .imagen-proyecto {
+  width: 700px;
+}
+body .imagen-proyecto img {
+  width: 100%;
 }
 body .blog-post {
   display: flex;
-  margin: 0px 208px;
   flex-direction: column;
 }
 body .buttons {
@@ -896,77 +1006,8 @@ body .loader span {
   transition: color 0.3s ease;
 }
 
-/* Modo oscuro */
 body.dark-mode .navbar__toggle {
   color: #fff;
-}
-
-/* === NAVBAR ANIMADA Y FUNCIONAL === */
-@media (max-width: 768px) {
-  .navbar {
-    position: relative;
-  }
-  .navbar__toggle {
-    display: block !important;
-    background: none;
-    border: none;
-    color: #000;
-    font-size: 2rem;
-    cursor: pointer;
-    z-index: 50;
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: transform 0.3s ease, color 0.3s ease;
-  }
-  body.dark-mode .navbar__toggle {
-    color: #fff;
-  }
-  .nav-links {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    flex-direction: column;
-    align-items: center;
-    background-color: #fff;
-    text-align: center;
-    overflow: hidden;
-    max-height: 0;
-    opacity: 0;
-    transition: max-height 0.4s ease, opacity 0.4s ease;
-  }
-  .nav-links.active {
-    max-height: 500px; /* suficiente para mostrar todos los links */
-    opacity: 1;
-  }
-  body.dark-mode .nav-links {
-    background-color: #121212;
-  }
-  .nav-links li {
-    margin: 10px 0;
-  }
-  /* --- Animación del ícono hamburguesa --- */
-  .navbar__toggle span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: currentColor;
-    margin: 5px auto;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-  }
-  /* Estado animado (X) */
-  .navbar__toggle.active span:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-  .navbar__toggle.active span:nth-child(2) {
-    opacity: 0;
-  }
-  .navbar__toggle.active span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
 }
 
 /*# sourceMappingURL=styles.css.map */
