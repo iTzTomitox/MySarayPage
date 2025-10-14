@@ -1,11 +1,11 @@
 @use './utilities/variables' as *;
-@import './layout/blog.scss' ;
-@import './layout/contacto.scss' ;
-@import './layout/eventos.scss' ;
-@import './layout/obras.scss' ;
-@import './layout/sobrelaautora.scss' ;
-@import './themes/dark.scss' ;
-@import './utilities/mixing.scss' ;
+@import './layout/blog.scss';
+@import './layout/contacto.scss';
+@import './layout/eventos.scss';
+@import './layout/obras.scss';
+@import './layout/sobrelaautora.scss';
+@import './themes/dark.scss';
+@import './utilities/mixing.scss';
 
 
 * {
@@ -53,7 +53,7 @@ body {
         gap: 24px;
         align-items: center;
     }
-    
+
     .text-intermed {
         grid-column: 2 / 12;
         grid-column-start: 2;
@@ -113,6 +113,40 @@ body {
         align-items: center;
         justify-content: space-between;
         padding: 24px;
+
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .navbar__toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #000;
+            transition: color 0.3s ease;
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            transition: all 0.3s ease;
+        }
+
+
 
         .toggle-switch {
             position: relative;

@@ -146,6 +146,9 @@
 .dark-mode .nav-links li ::before {
   background-color: #fff;
 }
+.dark-mode .navbar__toggle {
+  color: #fff;
+}
 .dark-mode .loader {
   background: #121212;
 }
@@ -320,6 +323,38 @@
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
+  body {
+    /* Acomodar el switch del modo oscuro arriba */
+  }
+  body .navbar {
+    flex-wrap: wrap;
+  }
+  body .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 1rem 0;
+    display: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: slideDown 0.3s ease forwards;
+  }
+  body .nav-links.active {
+    display: flex;
+  }
+  body .navbar__toggle {
+    display: block;
+  }
+  body .nav-links li {
+    margin: 10px 0;
+  }
+  body .toggle-switch {
+    order: -1;
+    margin-bottom: 1rem;
+  }
   body div .grid-container {
     grid-template-columns: 1fr;
     padding: 10px;
@@ -358,6 +393,56 @@
     width: 100%;
   }
 }
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 1rem 0;
+    display: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: slideDown 0.3s ease forwards;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .navbar__toggle {
+    display: block;
+  }
+  .nav-links li {
+    margin: 10px 0;
+  }
+  /* Acomodar el switch del modo oscuro arriba */
+  .toggle-switch {
+    order: -1;
+    margin-bottom: 1rem;
+  }
+}
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+body.dark-mode .nav-links {
+  background-color: #121212;
+}
+
+body.dark-mode .nav-links a {
+  color: #fff;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -448,6 +533,32 @@ body nav {
   align-items: center;
   justify-content: space-between;
   padding: 24px;
+}
+body nav .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: relative;
+  z-index: 10;
+}
+body nav .navbar__toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #000;
+  transition: color 0.3s ease;
+}
+body nav .navbar__toggle:hover {
+  opacity: 0.7;
+}
+body nav .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  transition: all 0.3s ease;
 }
 body nav .toggle-switch {
   position: relative;

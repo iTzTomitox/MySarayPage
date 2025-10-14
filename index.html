@@ -66,19 +66,21 @@
 
   <div id="content">
     <header>
-      <nav>
 
-        <div class="logo">
+      <nav class="navbar">
+        <div class="logo navbar__logo">
           <a href="./index.html"><img src="./assents/logonegro.png" alt="Logo My Saray"></a>
         </div>
 
-        <div class="hamburger-menu" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
 
-        <ul class="nav-links">
+        <button class="navbar__toggle" id="menu-toggle" aria-label="Menú">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+
+
+        <ul class="nav-links" id="nav-links">
           <div class="toggle-switch">
             <label class="switch-label">
               <input type="checkbox" class="checkbox">
@@ -93,6 +95,7 @@
           <li><a href="./pages/contacto.html">Contacto</a></li>
         </ul>
       </nav>
+
     </header>
 
     <div class="grid-container">
