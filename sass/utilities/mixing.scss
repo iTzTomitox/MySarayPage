@@ -158,3 +158,57 @@
         font-size: 15px;
         color: rgb(255, 255, 255);
     }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+        body {
+            div {
+                .grid-container {
+                    grid-template-columns: 1fr;
+                    padding: 10px;
+
+                    h1 {
+                        font-size: 36px;
+                    }
+
+                    p {
+                        font-size: 16px;
+                    }
+
+                    .inicio-presentacion {
+                        grid-template-columns: 1fr 1fr;
+                        grid-column: 2 / 12;
+                                                justify-items: center;
+
+                        .imagen-proyecto {
+                            width: 200px;
+
+                            img {
+                                width: 100%;
+                            }
+                        }
+                    }
+
+                    .section-soy {
+                        grid-column: 2 / 12;
+                        grid-template-columns: 1fr 1fr;
+                        justify-items: center;
+
+                        .buttons {
+                            display: flex;
+                            gap: 0px;
+                            flex-direction: column;
+                        }
+
+                        .imagen-proyecto {
+                            width: 200px;
+
+                            img {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
